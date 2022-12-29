@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+
+    --clr-very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --clr-soft-red: hsl(14, 88%, 65%);
+    
+    /* Background gradient: */
+    
+    --clr-soft-violet: #af67e9;
+    --clr-soft-blue: #6565e7;
+    
+    /* Text */
+    --clr-very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --clr-dark-grayish-blue: hsl(240, 6%, 50%);
+    /* Dividers */
+    --clr-light-grayish-blue: hsl(240, 5%, 91%);
+
+    --font-regular: 400;
+    --font-bold: 700;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: var(--font-regular);
+    color: var(--clr-very-dark-grayish-blue);
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #af67e9 0%, #6565e7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #af67e9 0%,#6565e7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #af67e9 0%,#6565e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#af67e9', endColorstr='#6565e7',GradientType=0 ); /* IE6-9 */
+}
+
+.card{
+    width: 920px;
+    background: white;
+    border-radius: 1.8rem;
+}
+
+.card-body{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.col{
+    width: calc(470px - 3.5rem);
+    padding: 4.5rem 0;
+    margin-right: 4.5rem;
+}
+
+.img-cont{
+    position: relative;
+    background: url(/assets/images/bg-pattern-desktop.svg) no-repeat;
+    background-position: right;
+    background-size: 175%;
+}
+
+.cube-img{
+    position: absolute;
+    z-index: 333;
+    top: 210px;
+    left: -5.75rem;
+}
+
+ .picture-box{
+    position: relative;
+    overflow: hidden;
+ }
+ .bg-img{
+    position: relative;
+    left: -4rem;
+ }
+ .bg-img.mobile{
+    display: none;
+ }
+
+.faq-cont{
+    position: relative;
+    display: flex ;
+    flex-direction: column;
+}
+.main-title{
+    font-weight: var(--font-bold);
+    margin-bottom: 1rem;
+}
+.question{
+    padding: 1rem 0;
+    border-radius: .5rem;
+    transition: all .25s ease-in-out;
+}
+.question:hover{
+    cursor: pointer;
+    position: relative;
+    top: -.25rem;
+    scale: 1.1;
+    -webkit-box-shadow: 0 20px 10px -10px var(--clr-soft-red);
+    box-shadow: 0 20px 10px -10px var(--clr-soft-red);
+}
+.question:hover .question-title{
+    color: var(--clr-soft-red);
+    font-weight: var(--font-bold);
+}
+.icon{
+    float: right;
+}
+.question.active .icon{
+    rotate: 180deg;
+}
+.question .answer{
+    display: none;
+    margin-top: 1rem;
+}
+
+.question.active .question-title{
+    font-weight: var(--font-bold);
+}
+
+.hr{
+    width: 100%;
+    margin: auto;
+    height: 4px;
+    background: var(--clr-light-grayish-blue);
+}
+@media (max-width: 544px) {
+    .card{
+        margin-top: 140px;
+        max-width: 100%;
+    }
+
+    .card-body{
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .col{
+        max-width: 100%;
+        padding: 0rem 1.5rem 2.5rem;
+        margin: 0;
+    }
+    .picture-box{
+        overflow: visible;
+    }
+    .img-cont{
+        top: -120px;
+        height: 250px;
+        width: 80%;
+        margin: auto;
+        padding: 0;
+        background: url(/assets/images/bg-pattern-mobile.svg) no-repeat;
+        background-size: contain;
+        background-position: bottom;
+    }
+    .cube-img{
+        display: none;
+    }
+    .bg-img{
+        inset: 0;
+    }
+    .bg-img.mobile{
+        display: block;
+        width: 100%;
+     }
+     .bg-img.desktop{
+        display: none;
+     }
+     .faq-cont{
+        margin-top: -5rem;
+    }
+    .main-title {
+        text-align: center;
+    }
+}
