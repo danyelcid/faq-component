@@ -431,14 +431,16 @@
     $('.question').click(function (e){
 
       if ($(this).hasClass('active')){
-        return
-      }
-      for (const q of questions) {
-        $(q).removeClass('active')
-        $(q).children('.answer').slideUp()
-      }
-      $(this).children('.answer').slideDown()
-      $(this).addClass('active')
+        $(this).removeClass('active')
+        $(this).children('.answer').slideUp()
+      } else {
+          for (const q of questions) {
+            $(q).removeClass('active')
+            $(q).children('.answer').slideUp()
+          }
+          $(this).children('.answer').slideDown()
+          $(this).addClass('active')
+        }
     })
 
   })
