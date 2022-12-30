@@ -102,15 +102,19 @@ body{
     margin-bottom: 1rem;
 }
 .question{
-    padding: 1rem 0;
+    padding: 1rem .5rem;
     border-radius: .5rem;
+    border: 1px solid transparent;
     transition: all .25s ease-in-out;
+    background-color: #ffffff;
 }
 .question:hover{
     cursor: pointer;
     position: relative;
     top: -.25rem;
     scale: 1.1;
+    z-index: 2;
+    border: 1px solid var(--clr-soft-red);
     -webkit-box-shadow: 0 20px 10px -10px var(--clr-soft-red);
     box-shadow: 0 20px 10px -10px var(--clr-soft-red);
 }
