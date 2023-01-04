@@ -127,9 +127,10 @@ body{
 }
 .icon{
     float: right;
+    transition: .25s;
 }
 .question.active .icon{
-    rotate: 180deg;
+    rotate: -180deg;
 }
 .question .answer{
     display: none;
