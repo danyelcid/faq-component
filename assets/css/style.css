@@ -53,6 +53,7 @@ body{
     border-radius: 1.8rem;
     -webkit-box-shadow: 0 50px 30px -25px rgba(57, 16, 90, 0.75);
     box-shadow:  0 50px 30px -25px rgba(57, 16, 90, 0.75);
+    margin-left: 5.75rem;
 }
 
 .card-body{
